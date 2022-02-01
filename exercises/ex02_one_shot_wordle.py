@@ -2,8 +2,8 @@
 __author__ = "730330800"
 
 secret_word: str = "python"
-check_word: int = 6
-word_guess: str = input("What is your 6 letter guess? ")
+check_word: int = len(secret_word)
+word_guess: str = input("What is your 6-letter guess? ")
 # set emoji box variables
 WHITE_BOX: str = "\U00002B1C"
 GREEN_BOX: str = "\U0001F7E9"
@@ -11,9 +11,8 @@ YELLOW_BOX: str = "\U0001F7E8"
 word_index: int = 0 
 emoji_result: str = ""
 # word length check 
-while int(len(word_guess)) < check_word: 
-    print(f"That was not {check_word} letters!")
-    word_error: str = input("Try again: ")
+while int(len(word_guess)) != check_word:
+    input("That was not 6 letters! Try again: ")
 # green box check
 while word_index < check_word:
     any_yellow: bool = False
