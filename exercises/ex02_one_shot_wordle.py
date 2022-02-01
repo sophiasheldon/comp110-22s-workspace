@@ -2,7 +2,7 @@
 __author__ = "730330800"
 
 secret_word: str = "python"
-check_word: int = len(secret_word)
+check_word: int = 6
 word_guess: str = input("What is your 6-letter guess? ")
 # set emoji box variables
 WHITE_BOX: str = "\U00002B1C"
@@ -12,7 +12,7 @@ word_index: int = 0
 emoji_result: str = ""
 # word length check 
 while int(len(word_guess)) != check_word:
-    input("That was not 6 letters! Try again: ")
+    word_guess: str = input("That was not 6 letters! Try again: ")
 # green box check
 while word_index < check_word:
     any_yellow: bool = False
