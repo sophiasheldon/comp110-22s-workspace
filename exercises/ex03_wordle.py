@@ -55,7 +55,7 @@ def input_guess(ex_len: int) -> str:
     word_guess: str = input("Enter a " + str(ex_len) + " character word: ")
     # word length check
     while int(len(word_guess)) != ex_len: 
-        word_guess: str = input("That was not " + str(ex_len) + " letters! Try again: ")
+        word_guess: str = input("That was not " + str(ex_len) + " letters! Try again:")
     return word_guess
 
 # declare function main
@@ -76,7 +76,6 @@ def main() -> None:
         if win_test == secret_word:
             # user has won 
             print("You won in " + str(turn_counter) + "/6 turns!")
-            exit()
         else: 
             turn_counter = turn_counter + 1
     # user has lost 
