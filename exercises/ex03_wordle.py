@@ -52,10 +52,10 @@ def emojified(guess: str, secret: str) -> str:
 
 def input_guess(ex_len: int) -> str: 
     """Ensuring the expected length of the guess."""
-    word_guess: str = input("Enter a " + str(ex_len) + " character word: ")
+    word_guess: str = input("Enter a 5 character word: ")
     # word length check
     while int(len(word_guess)) != ex_len: 
-        word_guess: str = input("That was not " + str(ex_len) + " letters! Try again:")
+        word_guess: str = input("That was not 5 chars! Try again: ")
     return word_guess
 
 # declare function main
@@ -76,6 +76,7 @@ def main() -> None:
         if win_test == secret_word:
             # user has won 
             print("You won in " + str(turn_counter) + "/6 turns!")
+            quit()
         else: 
             turn_counter = turn_counter + 1
     # user has lost 
