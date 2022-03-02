@@ -8,16 +8,19 @@ from utils import only_evens, sub, concat
 
 
 def test_only_evens_empty() -> None:
+    """Unit test for only_evens function: empty list returned."""
     n_list: list[int] = []
     assert only_evens(n_list) == []
 
 
-def test_only_evens_single_item() -> None: 
+def test_only_evens_single_item() -> None:
+    """Unit test for only_evens: single item returned."""
     n_list: list[int] = [2, 5]
     assert only_evens(n_list) == [2]
 
 
-def test_only_evens_many_items() -> None: 
+def test_only_evens_many_items() -> None:
+    """Unit test for only_evens: multiple items returned."""
     n_list: list[int] = [1, 2, 3, 4]
     assert only_evens(n_list) == [2, 4]
 
@@ -26,6 +29,7 @@ def test_only_evens_many_items() -> None:
 
 
 def test_sub_empty() -> None:
+    """Unit test for sub: returns empty list."""
     n_list: list[int] = []
     start: int = 0 
     end: int = 0
@@ -33,13 +37,15 @@ def test_sub_empty() -> None:
 
 
 def test_sub_single_item() -> None:
+    """Unit test for sub: returns single item."""
     n_list: list[int] = [0, 1]
     start: int = 0 
     end: int = 1
     assert sub(n_list, start, end) == [(n_list[0])]
 
 
-def test_sub_many_items() -> None: 
+def test_sub_many_items() -> None:
+    """Unit test for sub: returns multiple items.""" 
     n_list: list[int] = [0, 1, 2, 3]
     start: int = 0 
     end: int = 3
@@ -48,19 +54,22 @@ def test_sub_many_items() -> None:
 
 # unit testing for concat function 
 
-def test_concat_empty() -> None: 
+def test_concat_empty() -> None:
+    """Unit test for concat: empty list returned.""" 
     list_one: list[int] = []
     list_two: list[int] = []
     assert concat(list_one, list_two) == []
 
 
-def test_concat_single_item() -> None: 
+def test_concat_single_item() -> None:
+    """Unit test for concat: single item from each list returned."""
     list_one: list[int] = [1]
     list_two: list[int] = [2]
     assert concat(list_one, list_two) == [1, 2]
 
 
-def test_concat_many_items() -> None: 
+def test_concat_many_items() -> None:
+    """Unit test for concat: multiple items from each list returned.""" 
     list_one: list[int] = [1, 2]
     list_two: list[int] = [3, 4]
     assert concat(list_one, list_two) == [1, 2, 3, 4]
