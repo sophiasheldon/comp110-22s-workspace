@@ -21,9 +21,11 @@ def sub(n_list: list[int], start: int, end: int) -> list[int]:
     """Returns subset of given list, between the specified start index and end index minus one.""" 
     subset: list[int] = list() 
     if start < 0:
-        start == 0
+        start = 0
     if end > len(n_list): 
-        end == len(n_list)
+        end = len(n_list)
+    if start == len(n_list): 
+        return subset
     if len(n_list) == 0 or start > len(n_list) or end <= 0: 
         return subset
     while end - 1 >= start: 
